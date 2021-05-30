@@ -84,3 +84,4 @@ Assuming p>n, k*(k+1)/2 = n and thus n = k<sup>2</sup> so k is sqrt(n) and hence
 
 1 < logn < sqrt(n) < n < nlogn < n<sup>2</sup> < ... < 2<sup>n</sup> < ....n<sup>n</sup>
 
+(Reference taken from Abdul Bari's Youtube playlist)

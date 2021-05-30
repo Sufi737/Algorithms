@@ -84,4 +84,33 @@ Assuming p>n, k*(k+1)/2 = n and thus n = k<sup>2</sup> so k is sqrt(n) and hence
 
 1 < logn < sqrt(n) < n < nlogn < n<sup>2</sup> < ... < 2<sup>n</sup> < ....n<sup>n</sup>
 
+For space complexity, the space taken by a single variable is always constant, that is O(1). The only concern is the space required when the input grows to a very large number, lets say N. For example, the space complexity of an algorithm that needs an array of size N is O(N).
+
+#### Some practice problems:
+
+```
+let a = 0, b = 0;
+for (let i = 0; i < n; ++i) {
+    a = a + i;
+}
+for (let j = 0; j < m; ++j) {
+    b = b + j;
+}
+```
+
+The first loop runs n times and the second runs m times => O(n+m)
+
+```
+let a = 0, b = 0;
+for (let i = 0; i < n; ++i) {
+    for (let j = 0; j < n; ++j) {
+        a = a + j;
+    }
+}
+for (let k = 0; k < n; ++k) {
+    b = b + k;
+}
+```
+For first loop, it runs n*n times and the second it runs n times. Hence, time complexity = O(n<sup>2</sup>+n) = O(n<sup>2</sup>)
+
 (Reference taken from Abdul Bari's Youtube playlist)

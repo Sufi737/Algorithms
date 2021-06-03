@@ -3,11 +3,14 @@
 The GCD (greatest common divisor) is the largest number that divides both. The euclidean algorithm to find GCD is pretty simple: for given 2 numbers, keep on finding the mod when dividing the greater number by smaller number, and replace the greater number with mod
 
 For given two number a and b
+
+```
 if b==0 -> return a as GCD
 else: 
     mod = a%b
     a = b
     mod = a
+```
 
 #### Javascript Implementation
 

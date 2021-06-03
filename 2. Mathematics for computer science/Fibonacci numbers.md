@@ -9,4 +9,6 @@ The sequence is
 Fast doubling method can be used which uses only 2 formulas:
 
 F(2n) = F(n)*[2F(n+1) – F(n)]
+
+
 F(2n + 1) = F(n)<sup>2</sup> + F(n+1)<sup>2</sup>

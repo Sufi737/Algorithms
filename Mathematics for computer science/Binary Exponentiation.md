@@ -9,7 +9,7 @@ So, in each iteration we will calculate the square and keep on finding the resul
 
 ```js
 function binary_exponentiation(a, b) {
-	if (b==0) return 1;
+    if (b==0) return 1;
     var result = binary_exponentiation(a, Math.floor(b/2));
     if (b%2 != 0) {
     	//as dividing the power by 2 need to add the remaining power

@@ -19,13 +19,13 @@ class Node {
 }
 
 class SinglyLinkedList {
-    constructor(value = null, prevNode = null, nextNode = null) {
-        this.head = new Node(value, prevNode, nextNode); //setting the first node as head node
+    constructor(value = null) {
+        this.head = new Node(value, null, null); //setting the first node as head node
         this.tail = this.head;
     }
 
     isEmpty() {
-        if (head == null) return true;
+        if (this.head == null) return true;
         return false; 
     }
 
@@ -138,7 +138,7 @@ class SinglyLinkedList {
 }
 
 
-let singlyLL = new SinglyLinkedList(3, null, null);
+let singlyLL = new SinglyLinkedList(3);
 singlyLL.addNode(7);
 singlyLL.addNode(10);
 singlyLL.addNode(13);

@@ -56,19 +56,19 @@ For 11 -> 1011 -> there are no bits to the right of 1 -> 1010 = 10
 
 So x & (x-1) will return all bits same as x except for the rightmost 1 (because we flipped it and the bits to its right)
 
-    12  ->  1100
+        12  ->  1100
     
-&   11  ->  1011
-    --------------
-            1000
+    &   11  ->  1011
+    -------------------
+                1000
 
 Now if a number is power of 2, it will have only one bit set as 1 in its binary form. So for calculating x-1 we will flip that 1, and after doing x & (x-1) it will always return 0
 
-    8   ->  1000
+        8   ->  1000
 
-&   7   ->  0111
-    --------------
-            0000
+    &   7   ->  0111
+    -------------------
+                0000
 
 It's that simple, simply do x & (x-1) and if it returns 0 it is a power of 2
 

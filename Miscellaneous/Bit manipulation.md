@@ -123,7 +123,7 @@ This is because every odd number has a bit set as 1 in the end
 
 #### 4. Counting the number of 1s in a binary representation
 
-We know that for a given number x, x-1 will have all bits to the right of rightmos 1 flipped. For 0100 (4) -> 0011 (3)
+We know that for a given number x, x-1 will have all bits to the right of rightmost 1 flipped. For 0100 (4) -> 0011 (3)
 
 If we AND both of them, it gives us the number of 1s less than the 1s in x
 

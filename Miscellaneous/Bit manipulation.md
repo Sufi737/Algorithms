@@ -36,36 +36,36 @@ In python we simply use >>
 
 #### 1. Finding if a number is a power of 2
 
-    If a number is a power of 2, it will always have only one bit set as 1 in the entire binary representation
+If a number is a power of 2, it will always have only one bit set as 1 in the entire binary representation
 
-    2 - 0001
-    4 - 0100
-    8 - 1000
-    16 - 10000
+2 - 0001
+4 - 0100
+8 - 1000
+16 - 10000
 
-    We can use this property to find if a number is a power of 2 in constant time
+We can use this property to find if a number is a power of 2 in constant time
 
-    If we have binary representation of x, then x-1 can be obtained by flipping all the bits to the right of the rightmost 1 in x (including the rightmost 1)
+If we have binary representation of x, then x-1 can be obtained by flipping all the bits to the right of the rightmost 1 in x (including the rightmost 1)
 
-    For example, we have 12 = 1100 -> flip the right most 1 and also all the bits to the right -> 1011 = 11
+For example, we have 12 = 1100 -> flip the right most 1 and also all the bits to the right -> 1011 = 11
     
-    For 11 -> 1011 -> there are no bits to the right of 1 -> 1010 = 10
+For 11 -> 1011 -> there are no bits to the right of 1 -> 1010 = 10
 
-    So x & (x-1) will return all bits same as x except for the rightmost 1 (because we flipped it and the bits to its right)
+So x & (x-1) will return all bits same as x except for the rightmost 1 (because we flipped it and the bits to its right)
 
     12  ->  1100
     11  ->  1011
     --------------
             1000
 
-    Now if a number is power of 2, it will have only one bit set as 1 in its binary form. So for calculating x-1 we will flip that 1, and after doing x & (x-1) it will always return 0
+Now if a number is power of 2, it will have only one bit set as 1 in its binary form. So for calculating x-1 we will flip that 1, and after doing x & (x-1) it will always return 0
 
     8   ->  1000
     7   ->  0111
     --------------
             0000
 
-    It's that simple, simply do x & (x-1) and if it returns 0 it is a power of 2
+It's that simple, simply do x & (x-1) and if it returns 0 it is a power of 2
 
 
 #### 2. Finding all possible subsets of a set

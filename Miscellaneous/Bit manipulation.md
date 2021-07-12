@@ -39,8 +39,11 @@ In python we simply use >>
 If a number is a power of 2, it will always have only one bit set as 1 in the entire binary representation
 
 2 - 0001
+
 4 - 0100
+
 8 - 1000
+
 16 - 10000
 
 We can use this property to find if a number is a power of 2 in constant time
@@ -54,14 +57,16 @@ For 11 -> 1011 -> there are no bits to the right of 1 -> 1010 = 10
 So x & (x-1) will return all bits same as x except for the rightmost 1 (because we flipped it and the bits to its right)
 
     12  ->  1100
-    11  ->  1011
+    
+&   11  ->  1011
     --------------
             1000
 
 Now if a number is power of 2, it will have only one bit set as 1 in its binary form. So for calculating x-1 we will flip that 1, and after doing x & (x-1) it will always return 0
 
     8   ->  1000
-    7   ->  0111
+
+&   7   ->  0111
     --------------
             0000
 
@@ -75,12 +80,19 @@ For a given subset of N elements there are 2^N subsets possible. We can represen
 For example, if we have set {a, b, b}
 
 000 = {}
+
 001 = {c}
+
 010 = {b}
+
 011 = {b,c}
+
 100 = {a}
+
 101 = {a,c}
+
 110 = {a,b}
+
 111 = {a,b,c}
 
 We can iterate over the binary representation and in each iteration check which bits are set(as 1 or 0) and print those bits from the set

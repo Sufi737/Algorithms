@@ -7,8 +7,11 @@ For example, 12 = 1100 = 1*2^2 + 1*2^3
 ### Bitwise operations
 
 AND (&) - returns 1 if both bits are 1 else 0
+
 OR (|) - returns 0 if both bits are 0 else 1
+
 NOT (~) - negates the bit
+
 XOR (^) - returns 0 if both bits same else 1
 
 ### Left shift
@@ -43,7 +46,9 @@ In python we simply use >>
     We can use this property to find if a number is a power of 2 in constant time
 
     If we have binary representation of x, then x-1 can be obtained by flipping all the bits to the right of the rightmost 1 in x (including the rightmost 1)
+
     For example, we have 12 = 1100 -> flip the right most 1 and also all the bits to the right -> 1011 = 11
+    
     For 11 -> 1011 -> there are no bits to the right of 1 -> 1010 = 10
 
     So x & (x-1) will return all bits same as x except for the rightmost 1 (because we flipped it and the bits to its right)

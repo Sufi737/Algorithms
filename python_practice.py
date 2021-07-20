@@ -1,20 +1,28 @@
+from typing import Counter
+
+
 class Graph:
     def __init__(self, n):
         self.graph = [[0 for i in range(n)] for j in range(n)]
-
+        self.nodeCount = n
 
     def addEdge(self, u, v, w):
+        #considering bidirectional graph
         self.graph[u-1][v-1] = w
         self.graph[v-1][u-1] = w
 
-    def DFS(self, node, visited):
-        visited.add(node+1)
-        print(visited)
-
-        for i in range(len(self.graph[0])):
-            if ((i+1) not in visited) and self.graph[node][i] > 0:
-                self.DFS(i, visited)
-
+    def BFS(self):
+        visited = [0]*self.nodeCount
+        queue = [0]
+        while queue:
+            current_node = queue.pop()
+            print(current_node+1)
+            visited[current_node] = 1
+            for neighbour in range(0, len(self.graph[0])):
+                if self.graph[current_node][neighbour] > 0 and visited[neighbour]!=1:
+                    queue.append(neighbour)
+                    visited[neighbour] = 1
+            
 
 newgraph = Graph(8)
 newgraph.addEdge(1, 4, 7)
@@ -27,7 +35,4 @@ newgraph.addEdge(7, 8, 3)
 
 print(newgraph.graph)
 
-visited = set()
-for i in range(0, 8):
-    if i not in visited:
-        newgraph.DFS(i, visited)
+newgraph.BFS()
